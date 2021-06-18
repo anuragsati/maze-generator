@@ -117,5 +117,11 @@ html, body{
 
 .grid{
 	margin-top: 5rem;
-	text-align: center;
+}
+
+.grid-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20px;
 }

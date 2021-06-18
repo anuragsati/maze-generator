@@ -263,7 +263,7 @@ const App = () => {
 		<div className="grid">
 			{
 				grid.map(row => 
-					<div>
+					<div className="grid-div">
 							{
 								row.map(node => 
 									{
