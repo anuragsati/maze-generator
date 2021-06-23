@@ -75,7 +75,7 @@
 @media only screen and (max-width: 600px) {
 	.RecursiveBacktracker-main{
 		padding: 0;
-		margin: 0;
+		margin: 0 0 8rem;
 	}
 
 	.RecursiveBacktracker-topic span{

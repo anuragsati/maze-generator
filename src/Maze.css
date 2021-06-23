@@ -83,7 +83,6 @@ body::-webkit-scrollbar-thumb{
 
 .logo {
 	font-weight: bold;
-	margin-bottom: 1rem;
 	text-align: center;
 	color: var(--light-white);
 	background-color : black;
@@ -117,8 +116,11 @@ body::-webkit-scrollbar-thumb{
         height: 5rem;
     }
 
-    .logo {
-        display: none;
+    .logo{
+	margin-bottom: none;
+    }
+    .logo-text {
+	display: none;
     }
 
     .navbar-nav {
@@ -151,5 +153,9 @@ body::-webkit-scrollbar-thumb{
 
     .navbar:hover .logo-text {
 	left: 0px;
+    }
+
+    .logo{
+	margin-bottom: 1rem;
     }
 }
