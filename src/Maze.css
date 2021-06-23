@@ -1,127 +1,155 @@
-/* =============== Header =============== */
-:root {
-	--Dark-Blue: #12232E;
-	--Lighter-Blue: #007CC7;
-	--Lightest-Blue: #4DA8DA;
-	--Shadow-of-DarkBlue: #203647;
-	--Shadow-of-LightBlue: #EEFBFB;
+:root{
+	font-size: 16px;
+	font-family: 'Open Sans';
+	--dark-black : #171717;
+	--light-black : #444444;
+	--dark-red : #da0037;
+	--light-green : #66de93;
+	--light-white : #ededed;
+	--transition-speed: 600ms;
+
 }
 
-html, body{
-	background-color: var(--Dark-Blue);
+body{
+    color: var(--dark-black);
+	margin: 0;
+	padding: 0;
 }
 
-.navbar {
-	width: 100vw;
-	height: 5rem;
+body::-webkit-scrollbar{
+	width: 0.25rem;
+}
+body::-webkit-scrollbar-track{
+	background-color: var(--light-white);
+}
+body::-webkit-scrollbar-thumb{
+	background-color: var(--dark-black);
 }
 
-.navbar-nav {
+
+.navbar{
+	position: fixed;
+	background-color: var(--dark-black);
+	transition: width 200ms ease;
+	overflow: scroll;
+}
+
+
+.navbar-nav{
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+	height: 100%;
 }
 
-.nav-link {
-	height: 3rem;
+.nav-item{
+	width: 100%;
+}
+.nav-item:last-child{
+	margin-top: auto;
+}
+
+.nav-link{
 	display: flex;
 	align-items: center;
-
-	margin: 0 1rem;
-	padding: 0 1rem;
-
-	color: var(--Shadow-of-LightBlue);
+	height: 5rem;
+	color: var(--light-white);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bolder;
-	letter-spacing: 0.1ch;
-	border-radius: 0.3rem;
-	cursor: pointer;
-
-	transition: all 0.8s ease;
+	filter: grayscale(1000%) opacity(0.8);
+	transition: var(--transition-speed);
 }
-
 .nav-link:hover{
-	background-color: var(--Shadow-of-DarkBlue);
+	filter: grayscale(0) opacity(1);
+	background-color: var(--light-black);
+	color: var(--light-white);
 }
 
-.generate-button{
-	background-color: #203647c1;
+.link-text{
+	display: none;
+	margin-left: 1rem;
 }
 
+.nav-link svg{
+	width: 2rem;
+	min-width: 2rem;
+	margin: 0 1.5rem;
+	color: var(--light-green);
+	transition: var(--transition-speed);
+}
 
 
 .logo {
-	height: 5rem;
-	padding: 2rem;
-	cursor: pointer;
-} 
-
-
-
-.dropdown{
-	position: relative;
-}
-
-#dropdown-list{
-	position: absolute;
-	background-color: var(--Shadow-of-DarkBlue);
-	list-style: none;
-	padding: 0;
-	border-radius: 0.3rem;
-	margin-top: 0.5rem;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	width : 10rem;
-
-	display: none;
-	transition: all 0.4s ease;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-
-.dropdown-caret{
-	height: 1.5rem;
-	width: 1.5rem;
-	color: var(--Shadow-of-LightBlue);
-	padding-left: 0.2rem;
-}
-
-.dropdown li{
-	width: 100%;
-	padding: 0.7rem 0;
+	font-weight: bold;
+	margin-bottom: 1rem;
 	text-align: center;
-	cursor: pointer;
-
-	transition: all 0.3s ease;
+	color: var(--light-white);
+	background-color : black;
+	font-size: 1.5rem;
+	letter-spacing: 0.3ch;
+	width: 100%;
 }
-.dropdown li:hover{
-	background-color: var(--Lighter-Blue);
+
+.logo svg{
+	color: var(--light-white);
+	transform: rotate(0deg);
+	transition: transform var(--transition-speed);
 }
 
-#dropdown-list a{
-	color: var(--Shadow-of-LightBlue);
+.navbar:hover .logo svg{
+	transform: rotate(-90deg);
+}
+
+.react-link{
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bolder;
-	letter-spacing: 0.1ch
 }
 
-/* =============== MainBody =============== */
 
-.grid{
-	margin-top: 5rem;
+
+/* =================MEDIA QUERIES================== */
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
 }
 
-.grid-div{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 20px;
+	/* Large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+	top: 0;
+	width: 5rem;
+	height: 100vh;
+    }
+
+    .navbar:hover {
+	width: 20rem;
+    }
+
+
+    .navbar:hover .link-text {
+	font-weight: bold;
+	display: block;
+    }
+
+    .navbar:hover .logo-text {
+	left: 0px;
+    }
 }

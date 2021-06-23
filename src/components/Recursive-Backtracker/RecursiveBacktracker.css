@@ -1,0 +1,80 @@
+:root{
+	font-size: 16px;
+	font-family: 'Open Sans';
+	--dark-black : #171717;
+	--light-black : #444444;
+	--dark-red : #da0037;
+	--light-green : #66de93;
+	--light-white : #ededed;
+}
+
+.RecursiveBacktracker-main{
+	margin-left: 5rem;
+	padding: 3rem 5rem;
+}
+
+.RecursiveBacktracker-topic{
+	text-align: center;
+}
+
+.RecursiveBacktracker-topic span{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 0.2rem;
+	font-size: 1.7rem;
+	color: var(--light-white);
+	padding: 0.8rem 2rem;
+	background-color: var(--dark-black);
+	box-shadow: 0.3rem 0.3rem var(--light-green);
+}
+.RecursiveBacktracker-topic svg{
+	width: 2rem;
+	height: 2rem;
+	margin-right: 1rem;
+	color: var(--light-green);
+}
+
+.RecursiveBacktracker-grid{
+	margin-top: 4rem;
+}
+
+.RecursiveBacktracker-grid-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20px;
+}
+
+.RecursiveBacktracker-functions{
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.RecursiveBacktracker-generate-button, .RecursiveBacktracker-reset-button{
+	border-radius: 0.2rem;
+	font-size: 1.2rem;
+	padding: 0.3rem 1.5rem;
+	text-decoration: none;
+
+	color: var(--light-white);
+	background-color: var(--dark-black);
+	box-shadow: 0 0.2rem var(--light-green);
+}
+
+.RecursiveBacktracker-generate-button:active, .RecursiveBacktracker-reset-button:active{
+	box-shadow: none;
+	transform: translateY(1px);
+}
+
+
+/* =================MEDIA QUERIES================== */
+/* Small screens */
+@media only screen and (max-width: 600px) {
+	.RecursiveBacktracker-main{
+		margin: 0;
+	}
+}
+    

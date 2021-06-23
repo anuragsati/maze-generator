@@ -1,0 +1,37 @@
+:root{
+	--dark-black : #171717;
+	--light-black : #444444;
+	--dark-red : #da0037;
+	--light-green : #66de93;
+	--light-white : #ededed;
+
+	--wall : 1px solid var(--light-black);
+	--fake-wall : 1px solid white;
+}
+
+.AldousBroder-node {
+	width: 20px;
+	height: 20px;
+	background-color: var(--dark-black);
+	display: inline-block;
+	margin-left: -1px;
+}
+
+
+.AldousBroder-left-wall{ border-left: var(--wall); }
+.AldousBroder-right-wall{ border-right: var(--wall); }
+.AldousBroder-top-wall{ border-top: var(--wall); }
+.AldousBroder-bottom-wall{ border-bottom: var(--wall); }
+
+.AldousBroder-fake-left-wall{ border-left: var(--fake-wall); }
+.AldousBroder-fake-right-wall{ border-right: var(--fake-wall); }
+.AldousBroder-fake-top-wall{ border-top: var(--fake-wall); }
+.AldousBroder-fake-bottom-wall{ border-bottom: var(--fake-wall); }
+
+
+.AldousBroder-node-visited{
+	background-color: white;
+}
+.AldousBroder-node-under-processing{
+	background-color: var(--light-green);
+}
