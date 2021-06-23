@@ -8,16 +8,16 @@
 	--light-white : #ededed;
 }
 
-.RecursiveBacktracker-main{
+.HuntAndKill-main{
 	margin-left: 5rem;
 	padding: 3rem 5rem;
 }
 
-.RecursiveBacktracker-topic{
+.HuntAndKill-topic{
 	text-align: center;
 }
 
-.RecursiveBacktracker-topic span{
+.HuntAndKill-topic span{
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -29,31 +29,31 @@
 	background-color: var(--dark-black);
 	box-shadow: 0.3rem 0.3rem var(--light-green);
 }
-.RecursiveBacktracker-topic svg{
+.HuntAndKill-topic svg{
 	width: 2rem;
 	height: 2rem;
 	margin-right: 1rem;
 	color: var(--light-green);
 }
 
-.RecursiveBacktracker-grid{
+.HuntAndKill-grid{
 	margin-top: 4rem;
 }
 
-.RecursiveBacktracker-grid-div{
+.HuntAndKill-grid-div{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 20px;
 }
 
-.RecursiveBacktracker-functions{
+.HuntAndKill-functions{
 	margin-top: 2rem;
 	display: flex;
 	justify-content: space-around;
 }
 
-.RecursiveBacktracker-generate-button, .RecursiveBacktracker-reset-button{
+.HuntAndKill-generate-button, .HuntAndKill-reset-button{
 	border-radius: 0.2rem;
 	font-size: 1.2rem;
 	padding: 0.3rem 1.5rem;
@@ -64,7 +64,7 @@
 	box-shadow: 0 0.2rem var(--light-green);
 }
 
-.RecursiveBacktracker-generate-button:active, .RecursiveBacktracker-reset-button:active{
+.HuntAndKill-generate-button:active, .HuntAndKill-reset-button:active{
 	box-shadow: none;
 	transform: translateY(1px);
 }
@@ -73,12 +73,12 @@
 /* =================MEDIA QUERIES================== */
 /* Small screens */
 @media only screen and (max-width: 600px) {
-	.RecursiveBacktracker-main{
+	.HuntAndKill-main{
 		padding: 0;
 		margin: 0;
 	}
 
-	.RecursiveBacktracker-topic span{
+	.HuntAndKill-topic span{
 		font-size: 1.5rem;
 		padding: 2rem 0;
 		width: 100vw;

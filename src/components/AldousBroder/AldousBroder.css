@@ -75,7 +75,16 @@
 /* Small screens */
 @media only screen and (max-width: 600px) {
 	.AldousBroder-main{
+		padding: 0;
 		margin: 0;
+	}
+
+	.AldousBroder-topic span{
+		font-size: 1.5rem;
+		padding: 2rem 0;
+		width: 100vw;
+		border-radius: 0;
+		box-shadow: 0 0.3rem var(--light-green);
 	}
 }
     

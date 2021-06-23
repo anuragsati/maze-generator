@@ -8,10 +8,22 @@ const dRow = [-1, 0, 1, 0];
 const dCol = [0, 1, 0, -1];
 let directionArray = [0,1,2,3];
 
-const windowWidth =  Math.floor((window.innerWidth-400)/24);
-const windowHeight =  Math.floor((window.innerHeight-400)/24);
+//select grid size
+let windowWidth;
+let windowHeight;
 
-let speed=30;
+if(window.matchMedia("(max-width: 600px)").matches){
+    windowWidth =  Math.floor((window.innerWidth)/24);
+    windowHeight = 10;
+}
+else{
+    windowWidth =  Math.floor((window.innerWidth-400)/24);
+    windowHeight = 20;
+};
+
+//other constants
+let speed=20;
+let RecursiveBacktrackerInterval;
 
 
 const RecursiveBacktracker = () => {
@@ -77,7 +89,7 @@ const RecursiveBacktracker = () => {
         prev.classList.add('consideration');
 
             
-        let RecursiveBacktrackerInterval = setInterval(() => {
+        RecursiveBacktrackerInterval = setInterval(() => {
             //if there is somthing in stack
             if(stack.length > 0){
 
@@ -131,63 +143,6 @@ const RecursiveBacktracker = () => {
 
 
         }, speed);
-
-
-
-
-
-
-
-
-        // let RecursiveBacktrackerInterval = setInterval(() => {
-            
-        //     if(stack.length > 0){
-        //         //pop the top element and set it as current element
-        //         let currentNode = stack.pop();
-            
-        //         //if node is not visited then visit it
-        //         if(!grid[currentNode.row][currentNode.col].isVisited){
-                    
-        //             //process the node i.e remove walls
-        //             const x = currentNode.row - currentNode.parent.row;
-        //             const y = currentNode.col - currentNode.parent.col;
-        //             const currentNodeElement = document.getElementById(`RecursiveBacktracker-node-${currentNode.row}-${currentNode.col}`);
-        //             const previousNodeElement = document.getElementById(`RecursiveBacktracker-node-${currentNode.parent.row}-${currentNode.parent.col}`);
-                
-                
-        //             if(x === -1 && y===0)
-        //                 removeWalls(currentNodeElement, previousNodeElement, 0);
-        //             else if(x === 0 && y===1)
-        //                 removeWalls(currentNodeElement, previousNodeElement, 1);
-        //             else if(x === 1 && y===0)
-        //                 removeWalls(currentNodeElement, previousNodeElement, 2);
-        //             else if(x === 0 && y===-1)
-        //                 removeWalls(currentNodeElement, previousNodeElement, 3);
-                
-                
-        //             //visite the node
-        //             grid[currentNode.row][currentNode.col].isVisited = true;
-        //             document.getElementById(`RecursiveBacktracker-node-${currentNode.row}-${currentNode.col}`).classList.add('RecursiveBacktracker-node-visited');
-                    
-                
-        //             //add adjacent unvisited neighbors of current node randomly to stack
-        //             shuffle(directionArray);
-        //             for(let i of directionArray){
-        //                 if(isValid(currentNode.row, currentNode.col, i)){
-        //                     const adjX = currentNode.row + dRow[i];
-        //                     const adjY = currentNode.col + dCol[i];
-        //                     stack.push({row : adjX, col : adjY, parent : {row: currentNode.row, col:currentNode.col}});
-        //                 }
-        //             }
-        //         }
-        //     }
-
-        //     else{
-        //         disableEverything(false);
-        //         clearInterval(RecursiveBacktrackerInterval);
-        //     }
-
-        // }, speed);
 
     }
 
@@ -262,20 +217,21 @@ const RecursiveBacktracker = () => {
 
 	//resets everything
 	const resetAll = () => {
-        window.location.reload();
+        disableEverything(false);
+        clearInterval(RecursiveBacktrackerInterval);
 
-        // const freshClass = 'node left-wall right-wall top-wall bottom-wall';
-        //     for (let row = 0; row < windowHeight; row++) {
-        //         for (let col = 0; col < windowWidth; col++) {
-        //             document.getElementById(`node-${row}-${col}`).className = freshClass;
-        //         }
-        //     }
+        const freshClass = 'RecursiveBacktracker-node RecursiveBacktracker-left-wall RecursiveBacktracker-right-wall RecursiveBacktracker-top-wall RecursiveBacktracker-bottom-wall';
+            for (let row = 0; row < windowHeight; row++) {
+                for (let col = 0; col < windowWidth; col++) {
+                    document.getElementById(`RecursiveBacktracker-node-${row}-${col}`).className = freshClass;
+                }
+            }
 
-        // grid = getInitialGrid();
-        // setGrid(grid);
+        grid = getInitialGrid();
+        setGrid(grid);
         
-        // stack = [];
-        // directionArray = [0,1,2,3];
+        stack = [];
+        directionArray = [0,1,2,3];
 	}
 
   

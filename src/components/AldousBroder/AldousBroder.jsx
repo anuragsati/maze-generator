@@ -7,11 +7,21 @@ const dRow = [-1, 0, 1, 0];
 const dCol = [0, 1, 0, -1];
 let directionArray = [0,1,2,3];
 
-const windowWidth =  Math.floor((window.innerWidth-400)/24);
-const windowHeight =  Math.floor((window.innerHeight-400)/24);
+//select grid size
+let windowWidth;
+let windowHeight;
 
+if(window.matchMedia("(max-width: 600px)").matches){
+    windowWidth =  Math.floor((window.innerWidth)/24);
+    windowHeight = 10;
+}
+else{
+    windowWidth =  Math.floor((window.innerWidth-400)/24);
+    windowHeight = 20;
+};
 
 let speed=1;
+let AldousBroderInterval;
 
 
 const AldousBroder = () => {
@@ -81,7 +91,7 @@ const AldousBroder = () => {
         prev.classList.add('AldousBroder-node-under-processing');
         removeWalls(document.getElementById(`AldousBroder-node-${0}-${0}`),document.getElementById(`AldousBroder-node-${0}-${1}`),1)
 
-        let AldousBroderInterval = setInterval(() => {
+        AldousBroderInterval = setInterval(() => {
             if(remaining > 0){
                 //visit current node
                 grid[currentNode.row][currentNode.col].isVisited = true;
@@ -192,19 +202,20 @@ const AldousBroder = () => {
 
 	//resets everything
 	const resetAll = () => {
-        window.location.reload();
-        // const freshClass = 'node left-wall right-wall top-wall bottom-wall';
-        //     for (let row = 0; row < windowHeight; row++) {
-        //         for (let col = 0; col < windowWidth; col++) {
-        //             document.getElementById(`node-${row}-${col}`).className = freshClass;
-        //         }
-        //     }
+        disableEverything(false);
+        clearInterval(AldousBroderInterval);
 
-        // grid = getInitialGrid();
-        // setGrid(grid);
+        const freshClass = 'AldousBroder-node AldousBroder-left-wall AldousBroder-right-wall AldousBroder-top-wall AldousBroder-bottom-wall';
+        for (let row = 0; row < windowHeight; row++) {
+            for (let col = 0; col < windowWidth; col++) {
+                document.getElementById(`AldousBroder-node-${row}-${col}`).className = freshClass;
+            }
+        }
+
+        grid = getInitialGrid();
+        setGrid(grid);
         
-        // stack = [];
-        // directionArray = [0,1,2,3];
+        directionArray = [0,1,2,3];
 	}
 
   
