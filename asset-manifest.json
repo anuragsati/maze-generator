@@ -1,24 +1,21 @@
 {
   "files": {
-    "main.css": "/maze-generator/static/css/main.38161a45.chunk.css",
-    "main.js": "/maze-generator/static/js/main.682be5d3.chunk.js",
-    "main.js.map": "/maze-generator/static/js/main.682be5d3.chunk.js.map",
-    "runtime-main.js": "/maze-generator/static/js/runtime-main.1a1af11f.js",
-    "runtime-main.js.map": "/maze-generator/static/js/runtime-main.1a1af11f.js.map",
-    "static/js/2.6e31dc1b.chunk.js": "/maze-generator/static/js/2.6e31dc1b.chunk.js",
-    "static/js/2.6e31dc1b.chunk.js.map": "/maze-generator/static/js/2.6e31dc1b.chunk.js.map",
-    "static/js/3.965a5e97.chunk.js": "/maze-generator/static/js/3.965a5e97.chunk.js",
-    "static/js/3.965a5e97.chunk.js.map": "/maze-generator/static/js/3.965a5e97.chunk.js.map",
+    "main.css": "/maze-generator/static/css/main.d188bdd0.chunk.css",
+    "main.js": "/maze-generator/static/js/main.b26d9bf5.chunk.js",
+    "main.js.map": "/maze-generator/static/js/main.b26d9bf5.chunk.js.map",
+    "runtime-main.js": "/maze-generator/static/js/runtime-main.873c8e8f.js",
+    "runtime-main.js.map": "/maze-generator/static/js/runtime-main.873c8e8f.js.map",
+    "static/js/2.5b19a95f.chunk.js": "/maze-generator/static/js/2.5b19a95f.chunk.js",
+    "static/js/2.5b19a95f.chunk.js.map": "/maze-generator/static/js/2.5b19a95f.chunk.js.map",
     "index.html": "/maze-generator/index.html",
-    "static/css/main.38161a45.chunk.css.map": "/maze-generator/static/css/main.38161a45.chunk.css.map",
-    "static/js/2.6e31dc1b.chunk.js.LICENSE.txt": "/maze-generator/static/js/2.6e31dc1b.chunk.js.LICENSE.txt",
-    "static/media/caret-down.27bd7575.svg": "/maze-generator/static/media/caret-down.27bd7575.svg",
-    "static/media/logo.ed106706.svg": "/maze-generator/static/media/logo.ed106706.svg"
+    "static/css/main.d188bdd0.chunk.css.map": "/maze-generator/static/css/main.d188bdd0.chunk.css.map",
+    "static/js/2.5b19a95f.chunk.js.LICENSE.txt": "/maze-generator/static/js/2.5b19a95f.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/maze-generator/static/media/bg.37dfa7db.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1a1af11f.js",
-    "static/js/2.6e31dc1b.chunk.js",
-    "static/css/main.38161a45.chunk.css",
-    "static/js/main.682be5d3.chunk.js"
+    "static/js/runtime-main.873c8e8f.js",
+    "static/js/2.5b19a95f.chunk.js",
+    "static/css/main.d188bdd0.chunk.css",
+    "static/js/main.b26d9bf5.chunk.js"
   ]
 }
