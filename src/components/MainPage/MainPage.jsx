@@ -15,17 +15,17 @@ const MainPage = () => {
             <h2>Generating mazes</h2>
             <hr />
             <p>Different algorithms for generating mazes work in different ways. Some start with a ‘solid’ block and ‘carve’ out passages as they progress. Others start with an ‘empty’ space and ‘build’ walls. The back track recursive algorithm is a carving algorithm: It starts out as a complete grid with all boundaries and walls set and removes walls to generate the labyrinth.
-                In this article I’m using a 2D rectangular grid but the technique can be generalized to any tessellating shapes in any number of dimensions.</p>
+                I’ve used 2D rectangular grid but the technique can be generalized to any tessellating shapes in any number of dimensions.</p>
 
             <h2>Properties of mazes</h2>
             <hr />
-            <p>Mazes have characteristics that describe them. A maze is classified as ‘perfect’ if it does not contain loops (as we will see later, the dual of a maze is a graph, and if this graph is a single tree with no cycles then it is a perfect maze. A perfect maze can also be described as a ‘simply connected’ maze.
-                If a maze is simply connected it is possible to solve it using a wall following algorithm. By always keeping you right hand (or left if you prefer!), against the maze wall and walking around you will walk a path that will eventually visit every location in the maze and return to the same location.</p>
+            <p>Mazes have characteristics that describe them. A maze is classified as ‘perfect’ if it does not contain loops (as we will see later, the dual of a maze is a graph, and if this graph is a single tree with no cycles then it is a perfect maze. A perfect maze can also be described as a ‘simply connected’ maze.</p>
+
             
             <p>Mazes are usually generated using random number generators and even running the same algorithm twice in a row (with different seeds for the random number generator) will produce different results. However, on average, different algorithms have different characteristics and properties. Here are some of these characteristics:</p>
 
             <ul>
-                <li><span><b>Connected/Complex</b> - We’ve mentioned this already. Is it possible to visit every location by simply following one wall? If so, the maze is simply connected. A simply connected maze does not have any loops.</span></li>
+                <li><span><b>Connected/Complex</b> - Is it possible to visit every location by simply following one wall? If so, the maze is simply connected. A simply connected maze does not have any loops.</span></li>
                 <li><span><b>Number of dead-ends</b> - It’s possible to make maze that has no wrong turns at all, it’s just a convoluted loop! This would not be a very challenging maze! The number of dead ends in a maze is the measure of the number of locations in the maze that have only one way in. A maze that has only a few dead-ends, and long pathways in-between, might be quite frustrating as you’d have to go a long distance before finding out you’d gone the wrong way!</span></li>
                 <li><span><b>Length of longest path</b> - This is often measured as percentage. First you find the shortest (optimal) path through the maze, then measure the ratio of the number of cells on this path to all the cells in the maze. A high percentage indicates a fair amount of convolution and twisting of the solution (taking lots of turns in order to get to the destination, and visiting a good measure of the maze before exiting).</span></li>
                 <li><span><b>Convolution</b> - Either measured as twistiness, or its inverse straightness, and is some metric to measure how often in the maze that the path exits a cell on the opposite side of the way it came in, and how often it turns a corner in a cell. The human brain has an easier job following paths that are straight (if you see a long line a cells in a straight line you instantly know that there is a clear path to the end of this section. However, if the path is twisted, you can’t immediately see to the end and have to trace it to find out).</span></li>
