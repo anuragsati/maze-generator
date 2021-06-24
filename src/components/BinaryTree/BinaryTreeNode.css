@@ -1,0 +1,53 @@
+:root{
+	--dark-black : #171717;
+	--light-black : #444444;
+	--dark-red : #da0037;
+	--light-green : #66de93;
+	--light-white : #ededed;
+
+	--wall : 1px solid var(--light-black);
+	--fake-wall : 1px solid white;
+}
+
+.BinaryTree-node {
+	width: 20px;
+	height: 20px;
+	background-color: var(--dark-black);
+	display: inline-block;
+	margin-left: -1px;
+}
+
+
+.BinaryTree-left-wall{ border-left: var(--wall); }
+.BinaryTree-right-wall{ border-right: var(--wall); }
+.BinaryTree-top-wall{ border-top: var(--wall); }
+.BinaryTree-bottom-wall{ border-bottom: var(--wall); }
+
+.BinaryTree-fake-left-wall{ border-left: var(--fake-wall); }
+.BinaryTree-fake-right-wall{ border-right: var(--fake-wall); }
+.BinaryTree-fake-top-wall{ border-top: var(--fake-wall); }
+.BinaryTree-fake-bottom-wall{ border-bottom: var(--fake-wall); }
+
+
+.BinaryTree-consideration{
+	background-color: var(--light-green);
+}
+.BinaryTree-fully-visited{
+	background-color: white;
+}
+
+/* .BinaryTree-node-visited{
+	animation-name: visited;
+	animation-duration: 1s;
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+	background-color: white;
+}
+
+@keyframes visited{
+	0%{ background-color: var(--light-green)}
+	10%{background-color: white;};
+} */
