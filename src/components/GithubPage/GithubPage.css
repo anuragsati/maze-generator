@@ -1,0 +1,70 @@
+:root{
+	font-size: 16px;
+	font-family: 'Open Sans';
+	--dark-black : #171717;
+	--light-black : #444444;
+	--dark-red : #da0037;
+	--light-green : #66de93;
+	--light-white : #ededed;
+}
+
+.GithubPage-main{
+	height: 100vh;
+	margin-left: 5rem;
+	padding: 3rem 5rem;
+
+	display: flex;
+	justify-content: center;
+}
+
+.GithubPage-topic{
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	background-color: var(--dark-black);
+	text-decoration: underline;
+}
+
+.GithubPage-topic a{
+	margin-top: 1rem;
+	font-size: 1.7rem;
+	color: var(--light-white);
+}
+
+.GithubPage-topic svg{
+	width: 10rem;
+	height: 10rem;
+	color: var(--light-green);
+}
+
+
+/* =================MEDIA QUERIES================== */
+/* Small screens */
+@media only screen and (max-width: 600px) {
+	.GithubPage-main{
+		padding: 0;
+		margin: 0;
+	}
+
+	.GithubPage-topic{
+		padding-top: 5rem;
+		height: 100%;
+		width: 100%;
+	}
+
+	.GithubPage-topic a{
+		font-size: 1.3rem;
+	}
+
+}
+    
+@media only screen and (min-width: 600px) {
+	.GithubPage-topic{
+		margin-top: 5rem;
+		padding: 3rem 5rem;
+		border-radius: 5px;
+		box-shadow: 0.3rem 0.3rem var(--light-green);
+	}
+}
