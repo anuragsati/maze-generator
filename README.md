@@ -1,10 +1,11 @@
 # MAZE GENERATOR
 **Welcome to Maze generator !**
- It is a tool that helps you visualise how mazes are generated.
+It is a tool that helps you visualise how mazes are generated.
+<br>
+You can access it @ https://anuragsati.github.io/maze-generator
 
 ![maze generator](./preview.png)
 
-You can access it @ https://anuragsati.github.io/maze-generator
 
 ## Mazes
 A maze is a complex structure of interconnected passageways. There should be (at least) one way to get from a designated start location to a designated end. Typically the path is convoluted and branched (these branches can also be branched, and often leading to dead-ends) making it not obvious to the naked eye the correct path to take (even when exposed to a God’s eye view from above with all information exposed).
