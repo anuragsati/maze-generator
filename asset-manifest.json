@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/maze-generator/static/css/main.2aa4ef65.chunk.css",
-    "main.js": "/maze-generator/static/js/main.ccbabaf1.chunk.js",
-    "main.js.map": "/maze-generator/static/js/main.ccbabaf1.chunk.js.map",
+    "main.js": "/maze-generator/static/js/main.af3489c4.chunk.js",
+    "main.js.map": "/maze-generator/static/js/main.af3489c4.chunk.js.map",
     "runtime-main.js": "/maze-generator/static/js/runtime-main.873c8e8f.js",
     "runtime-main.js.map": "/maze-generator/static/js/runtime-main.873c8e8f.js.map",
-    "static/js/2.7d6f94a0.chunk.js": "/maze-generator/static/js/2.7d6f94a0.chunk.js",
-    "static/js/2.7d6f94a0.chunk.js.map": "/maze-generator/static/js/2.7d6f94a0.chunk.js.map",
+    "static/js/2.735418bf.chunk.js": "/maze-generator/static/js/2.735418bf.chunk.js",
+    "static/js/2.735418bf.chunk.js.map": "/maze-generator/static/js/2.735418bf.chunk.js.map",
     "index.html": "/maze-generator/index.html",
     "static/css/main.2aa4ef65.chunk.css.map": "/maze-generator/static/css/main.2aa4ef65.chunk.css.map",
-    "static/js/2.7d6f94a0.chunk.js.LICENSE.txt": "/maze-generator/static/js/2.7d6f94a0.chunk.js.LICENSE.txt",
+    "static/js/2.735418bf.chunk.js.LICENSE.txt": "/maze-generator/static/js/2.735418bf.chunk.js.LICENSE.txt",
     "static/media/index.css": "/maze-generator/static/media/bg.37dfa7db.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.873c8e8f.js",
-    "static/js/2.7d6f94a0.chunk.js",
+    "static/js/2.735418bf.chunk.js",
     "static/css/main.2aa4ef65.chunk.css",
-    "static/js/main.ccbabaf1.chunk.js"
+    "static/js/main.af3489c4.chunk.js"
   ]
 }
